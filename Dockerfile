@@ -20,8 +20,6 @@ RUN apk add --no-cache wget && \
 
 # Target Volume for downloaded files
 VOLUME /media/Downloads
-# Nzbget configuration file
-VOLUME /opt/nzbget/nzbget.conf 
 
 EXPOSE 6789
 
