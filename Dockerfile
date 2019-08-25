@@ -1,4 +1,9 @@
 FROM arm32v7/alpine:3.10
+LABEL build-date="2019-08-25T21:09:27Z"
+LABEL name="nzbget-arm32v7"
+LABEL description="Nzbget for the arm32v7 architecture"
+LABEL url="https://nzbget.net"
+LABEL vcs-ref="https://github.com/bradcordeiro/docker-nzbget-arm32v7"
 
 WORKDIR /opt
 
@@ -15,7 +20,7 @@ RUN apk add --no-cache wget && \
 
 # Target Volume for downloaded files
 VOLUME /media/Downloads
-# Nzbget configuration file, see https://github.com/nzbget/nzbget/blob/develop/nzbget.conf
+# Nzbget configuration file
 VOLUME /opt/nzbget/nzbget.conf 
 
 EXPOSE 6789
